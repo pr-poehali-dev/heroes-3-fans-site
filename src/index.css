@@ -29,6 +29,17 @@ body {
   letter-spacing: 0.5px;
 }
 
+.hero-portrait {
+  transition: all 0.3s ease;
+  image-rendering: pixelated;
+}
+
+.hero-portrait:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(155, 135, 245, 0.6);
+}
+
 @layer components {
   .pixel-card {
     @apply bg-homm3-blue border-2 border-homm3-purple rounded-none p-4 relative;
@@ -62,7 +73,7 @@ body {
   }
   
   .pixel-button:hover {
-    @apply bg-homm3-light-purple;
+    @apply bg-homm3-purple brightness-125;
     transform: translate(1px, 1px);
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   }

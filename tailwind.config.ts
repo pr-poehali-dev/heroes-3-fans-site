@@ -64,7 +64,9 @@ export default {
 				},
 				homm3: {
 					'blue': '#1A1F2C',
+					'dark-blue': '#151822',
 					'purple': '#6E59A5',
+					'light-purple': '#9b87f5',
 					'gold': '#FEF7CD',
 					'brown': '#403E43',
 					'sky': '#D3E4FD'
