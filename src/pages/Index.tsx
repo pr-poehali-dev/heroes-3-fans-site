@@ -1,12 +1,125 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroesButton from "@/components/HeroesButton";
+import NewsCard from "@/components/NewsCard";
+import { Link } from "react-router-dom";
+import { Download, Users, ScrollText } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-grow">
+        {/* Hero section */}
+        <section className="px-4 py-12 md:py-20 text-center relative">
+          <div className="container mx-auto">
+            <h1 className="pixel-heading text-3xl md:text-5xl mb-6">
+              Герои Меча и Магии III
+            </h1>
+            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+              Присоединяйтесь к легендарной стратегии! Объединяем любителей Heroes III 
+              со всего мира и рассказываем об обновлениях любимой игры.
+            </p>
+            
+            <div className="flex justify-center mb-8">
+              <HeroesButton size="large" animate>
+                <Download className="mr-2" />
+                Скачать игру
+              </HeroesButton>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
+              <div className="pixel-card">
+                <h2 className="font-pixel text-xl text-homm3-gold mb-3">
+                  Обновления
+                </h2>
+                <p className="mb-4">
+                  Следите за последними обновлениями и модификациями игры.
+                </p>
+                <Link to="/updates" className="pixel-button inline-flex items-center">
+                  <ScrollText className="mr-2" />
+                  Подробнее
+                </Link>
+              </div>
+              
+              <div className="pixel-card">
+                <h2 className="font-pixel text-xl text-homm3-gold mb-3">
+                  Сообщество
+                </h2>
+                <p className="mb-4">
+                  Присоединяйтесь к сообществу поклонников и найдите соратников.
+                </p>
+                <Link to="/community" className="pixel-button inline-flex items-center">
+                  <Users className="mr-2" />
+                  Вступить
+                </Link>
+              </div>
+              
+              <div className="pixel-card">
+                <h2 className="font-pixel text-xl text-homm3-gold mb-3">
+                  Ресурсы
+                </h2>
+                <p className="mb-4">
+                  Гайды, карты, советы и стратегии для различных фракций.
+                </p>
+                <Link to="/resources" className="pixel-button inline-flex items-center">
+                  <ScrollText className="mr-2" />
+                  Изучить
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* News section */}
+        <section className="px-4 py-12 bg-homm3-blue">
+          <div className="container mx-auto">
+            <h2 className="pixel-heading text-2xl md:text-3xl text-center mb-8">
+              Последние новости
+            </h2>
+            
+            <div className="max-w-3xl mx-auto">
+              <NewsCard title="Обновление HD мода" date="15 мая 2023">
+                <p>
+                  Вышло обновление HD-мода с поддержкой современных разрешений и улучшенной графикой.
+                  Теперь игра выглядит еще лучше на современных мониторах!
+                </p>
+              </NewsCard>
+              
+              <NewsCard title="Турнир героев" date="3 мая 2023">
+                <p>
+                  Приглашаем принять участие в ежегодном турнире! Регистрация открыта 
+                  до 20 мая. Победителей ждут ценные призы и слава в сообществе!
+                </p>
+              </NewsCard>
+              
+              <NewsCard title="Новый мод «Возвращение Грааля»" date="25 апреля 2023">
+                <p>
+                  Энтузиасты выпустили новую глобальную модификацию с дополнительными городами, 
+                  существами и сюжетными кампаниями. Скачать можно на странице ресурсов.
+                </p>
+              </NewsCard>
+            </div>
+            
+            <div className="text-center mt-8">
+              <Link to="/updates" className="pixel-button">
+                Все новости
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <footer className="bg-homm3-blue border-t-2 border-homm3-purple px-4 py-6">
+        <div className="container mx-auto text-center">
+          <p className="text-homm3-gold font-pixel mb-2">
+            © 2023 Сообщество Героев III
+          </p>
+          <p className="text-sm text-homm3-sky">
+            Heroes of Might and Magic III является зарегистрированной торговой маркой Ubisoft Entertainment
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
