@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HeroesButton from "@/components/HeroesButton";
 import NewsCard from "@/components/NewsCard";
+import GameLogo from "@/components/GameLogo";
+import HeroesGallery from "@/components/HeroesGallery";
 import { Link } from "react-router-dom";
 import { Download, Users, ScrollText } from "lucide-react";
 
@@ -10,12 +12,11 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero section */}
-        <section className="px-4 py-12 md:py-20 text-center relative">
+        {/* Hero section with Logo */}
+        <section className="px-4 py-8 md:py-12 text-center relative">
           <div className="container mx-auto">
-            <h1 className="pixel-heading text-3xl md:text-5xl mb-6">
-              Герои Меча и Магии III
-            </h1>
+            <GameLogo />
+            
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
               Присоединяйтесь к легендарной стратегии! Объединяем любителей Heroes III 
               со всего мира и рассказываем об обновлениях любимой игры.
@@ -28,7 +29,10 @@ const Index = () => {
               </HeroesButton>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
+            {/* Heroes Gallery */}
+            <HeroesGallery />
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto mt-8">
               <div className="pixel-card">
                 <h2 className="font-pixel text-xl text-homm3-gold mb-3">
                   Обновления
