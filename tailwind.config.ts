@@ -22,26 +22,7 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-
-        extend: {
-          animation: {
-            "logo-pulse": "logo-pulse 3s ease-in-out forwards",
-            "sword-rotate": "sword-rotate 2s ease-in-out",
-            "wand-rotate": "wand-rotate 2s ease-in-out",
-            "char-bounce": "char-bounce 0.6s ease-in-out",
-            "char-fade": "char-fade 0.8s ease-in-out forwards",
-            "star-fall": "star-fall 2s ease-in 1s forwards",
-          },
-          transitionDelay: {
-            '75': '75ms',
-            '100': '100ms',
-            '150': '150ms',
-            '200': '200ms',
-            '500': '500ms',
-            '1000': '1000ms',
-          },
-        },
-
+				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
