@@ -40,7 +40,43 @@ body {
   box-shadow: 0 0 10px rgba(155, 135, 245, 0.6);
 }
 
-@layer components {
+  @keyframes logo-pulse {
+    0% { opacity: 0.1; transform: scale(0); }
+    50% { opacity: 0.2; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(2); }
+  }
+  
+  @keyframes sword-rotate {
+    0% { transform: rotate(-45deg); }
+    25% { transform: rotate(-30deg); }
+    75% { transform: rotate(-60deg); }
+    100% { transform: rotate(-45deg); }
+  }
+  
+  @keyframes wand-rotate {
+    0% { transform: rotate(45deg); }
+    25% { transform: rotate(60deg); }
+    75% { transform: rotate(30deg); }
+    100% { transform: rotate(45deg); }
+  }
+  
+  @keyframes char-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes char-fade {
+    0% { opacity: 0.3; transform: translateY(3px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes star-fall {
+    0% { transform: translateY(-100%) rotate(0); }
+    100% { transform: translateY(250%) rotate(360deg); }
+  }
+
+  .hero-portrait {
+
   .pixel-card {
     @apply bg-homm3-blue border-2 border-homm3-purple rounded-none p-4 relative;
     image-rendering: pixelated;
