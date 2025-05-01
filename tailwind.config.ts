@@ -10,8 +10,8 @@ export default {
 	],
 	prefix: "",
 	theme: {
-        'homm3-dark-blue': '#151822',
-        'homm3-background': '#FF0000',
+		container: {
+			center: true,
 			padding: '2rem',
 			screens: {
 				'2xl': '1400px'
@@ -22,26 +22,6 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-
-        extend: {
-          animation: {
-            "logo-pulse": "logo-pulse 3s ease-in-out forwards",
-            "sword-rotate": "sword-rotate 2s ease-in-out",
-            "wand-rotate": "wand-rotate 2s ease-in-out",
-            "char-bounce": "char-bounce 0.6s ease-in-out",
-            "char-fade": "char-fade 0.8s ease-in-out forwards",
-            "star-fall": "star-fall 2s ease-in 1s forwards",
-          },
-          transitionDelay: {
-            '75': '75ms',
-            '100': '100ms',
-            '150': '150ms',
-            '200': '200ms',
-            '500': '500ms',
-            '1000': '1000ms',
-          },
-        },
-
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -116,12 +96,47 @@ export default {
 				'pixel-pulse': {
 					'0%, 100%': { transform: 'scale(1)' },
 					'50%': { transform: 'scale(1.05)' }
+				},
+				"logo-pulse": {
+					"0%": { opacity: "0.1", transform: "scale(0)" },
+					"50%": { opacity: "0.2", transform: "scale(1.5)" },
+					"100%": { opacity: "0", transform: "scale(2)" }
+				},
+				"sword-rotate": {
+					"0%": { transform: "rotate(-45deg)" },
+					"25%": { transform: "rotate(-30deg)" },
+					"75%": { transform: "rotate(-60deg)" },
+					"100%": { transform: "rotate(-45deg)" }
+				},
+				"wand-rotate": {
+					"0%": { transform: "rotate(45deg)" },
+					"25%": { transform: "rotate(60deg)" },
+					"75%": { transform: "rotate(30deg)" },
+					"100%": { transform: "rotate(45deg)" }
+				},
+				"char-bounce": {
+					"0%, 100%": { transform: "translateY(0)" },
+					"50%": { transform: "translateY(-5px)" }
+				},
+				"char-fade": {
+					"0%": { opacity: "0.3", transform: "translateY(3px)" },
+					"100%": { opacity: "1", transform: "translateY(0)" }
+				},
+				"star-fall": {
+					"0%": { transform: "translateY(-100%) rotate(0)" },
+					"100%": { transform: "translateY(250%) rotate(360deg)" }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pixel-pulse': 'pixel-pulse 2s infinite'
+				'pixel-pulse': 'pixel-pulse 2s infinite',
+				"logo-pulse": "logo-pulse 3s ease-in-out forwards",
+				"sword-rotate": "sword-rotate 2s ease-in-out",
+				"wand-rotate": "wand-rotate 2s ease-in-out",
+				"char-bounce": "char-bounce 0.6s ease-in-out",
+				"char-fade": "char-fade 0.8s ease-in-out forwards",
+				"star-fall": "star-fall 2s ease-in 1s forwards"
 			},
 			backgroundImage: {
 				'pixel-pattern': "url('data:image/svg+xml,%3Csvg width=\"6\" height=\"6\" viewBox=\"0 0 6 6\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%236E59A5\" fill-opacity=\"0.1\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M5 0h1L0 5v1H0V0h5z\"/%3E%3C/g%3E%3C/svg%3E')"
@@ -131,5 +146,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate")]
 } satisfies Config;

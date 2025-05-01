@@ -76,6 +76,9 @@ body {
   }
 
   .hero-portrait {
+    transition: all 0.3s ease;
+    image-rendering: pixelated;
+  }
 
   .pixel-card {
     @apply bg-homm3-blue border-2 border-homm3-purple rounded-none p-4 relative;
@@ -123,4 +126,4 @@ body {
     @apply font-pixel text-homm3-gold;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
   }
-}
+
