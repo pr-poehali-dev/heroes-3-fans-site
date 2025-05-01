@@ -10,8 +10,8 @@ export default {
 	],
 	prefix: "",
 	theme: {
-		container: {
-			center: true,
+        'homm3-dark-blue': '#151822',
+        'homm3-background': '#FF0000',
 			padding: '2rem',
 			screens: {
 				'2xl': '1400px'
