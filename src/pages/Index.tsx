@@ -1,10 +1,11 @@
+
 import Navbar from "@/components/Navbar";
 import HeroesButton from "@/components/HeroesButton";
 import NewsCard from "@/components/NewsCard";
 import GameLogo from "@/components/GameLogo";
 import HeroesGallery from "@/components/HeroesGallery";
 import { Link } from "react-router-dom";
-import { Download, Users, ScrollText } from "lucide-react";
+import { Download, Users, ScrollText, Gamepad2 } from "lucide-react";
 
 const Index = () => {
   return (
@@ -22,11 +23,18 @@ const Index = () => {
               со всего мира и рассказываем об обновлениях любимой игры.
             </p>
             
-            <div className="flex justify-center mb-8">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <HeroesButton size="large" animate>
                 <Download className="mr-2" />
                 Скачать игру
               </HeroesButton>
+              
+              <Link to="/game">
+                <HeroesButton size="large" variant="secondary">
+                  <Gamepad2 className="mr-2" />
+                  Играть в мини-игру
+                </HeroesButton>
+              </Link>
             </div>
             
             {/* Heroes Gallery */}
@@ -83,6 +91,13 @@ const Index = () => {
             </h2>
             
             <div className="max-w-3xl mx-auto">
+              <NewsCard title="Новая мини-игра на сайте!" date="2 мая 2025">
+                <p>
+                  Мы добавили мини-игру в стиле Heroes III прямо на наш сайт! Попробуйте свои 
+                  силы в тактической стратегии прямо сейчас - никаких установок не требуется!
+                </p>
+              </NewsCard>
+            
               <NewsCard title="Обновление HD мода" date="15 мая 2023">
                 <p>
                   Вышло обновление HD-мода с поддержкой современных разрешений и улучшенной графикой.
@@ -94,13 +109,6 @@ const Index = () => {
                 <p>
                   Приглашаем принять участие в ежегодном турнире! Регистрация открыта 
                   до 20 мая. Победителей ждут ценные призы и слава в сообществе!
-                </p>
-              </NewsCard>
-              
-              <NewsCard title="Новый мод «Возвращение Грааля»" date="25 апреля 2023">
-                <p>
-                  Энтузиасты выпустили новую глобальную модификацию с дополнительными городами, 
-                  существами и сюжетными кампаниями. Скачать можно на странице ресурсов.
                 </p>
               </NewsCard>
             </div>
@@ -117,7 +125,7 @@ const Index = () => {
       <footer className="bg-homm3-blue border-t-2 border-homm3-purple px-4 py-6">
         <div className="container mx-auto text-center">
           <p className="text-homm3-gold font-pixel mb-2">
-            © 2023 Сообщество Героев III
+            © 2023-2025 Сообщество Героев III
           </p>
           <p className="text-sm text-homm3-sky">
             Heroes of Might and Magic III является зарегистрированной торговой маркой Ubisoft Entertainment
