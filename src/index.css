@@ -1,5 +1,50 @@
-body {
-  background-color: #FF0000;
-  color: var(--homm3-sky);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --homm3-sky: #D3E4FD;
+  --homm3-gold: #FEF7CD;
+  --homm3-purple: #6E59A5;
+  --homm3-light-purple: #9b87f5;
+  --homm3-blue: #1A1F2C;
+  --homm3-dark-blue: #151822;
+  --homm3-brown: #403E43;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@layer base {
+  body {
+    background-color: var(--homm3-blue);
+    color: var(--homm3-sky);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .pixel-frame {
+    @apply border-2 border-homm3-purple bg-homm3-blue relative;
+    box-shadow: 0 0 0 2px #1A1F2C, 0 0 0 4px #6E59A5;
+  }
+  
+  .pixel-card {
+    @apply border-2 border-homm3-purple bg-homm3-blue p-4 relative;
+  }
+  
+  .pixel-button {
+    @apply border-2 border-homm3-purple bg-homm3-blue px-4 py-2 text-homm3-gold font-pixel 
+    hover:bg-homm3-purple transition-colors duration-200 inline-block;
+  }
+  
+  .pixel-heading {
+    @apply font-pixel text-homm3-gold relative inline-block;
+    text-shadow: 2px 2px 0 #6E59A5;
+  }
+  
+  .pixel-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-homm3-purple;
+  }
 }
