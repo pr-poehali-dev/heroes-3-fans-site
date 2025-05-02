@@ -1,5 +1,5 @@
 
-import { Crown, Sword, Wand, Castle, Dragon } from "lucide-react";
+import { Crown, Sword, Wand, Castle, Dices } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const GameLogo = () => {
@@ -42,12 +42,12 @@ const GameLogo = () => {
         </div>
         
         <div className="relative z-10">
-          {/* Драконы вокруг названия */}
+          {/* Звезды/руны вокруг названия вместо драконов */}
           <div className="absolute -top-6 left-1/4 transform -translate-x-1/2 opacity-30">
-            <Dragon className={`text-homm3-gold w-12 h-12 transform rotate-45 ${isAnimating ? 'animate-dragon-float' : ''}`} />
+            <Dices className={`text-homm3-gold w-12 h-12 transform rotate-45 ${isAnimating ? 'animate-dragon-float' : ''}`} />
           </div>
           <div className="absolute -top-6 right-1/4 transform translate-x-1/2 opacity-30">
-            <Dragon className={`text-homm3-gold w-12 h-12 transform -rotate-45 ${isAnimating ? 'animate-dragon-float delay-500' : ''}`} />
+            <Dices className={`text-homm3-gold w-12 h-12 transform -rotate-45 ${isAnimating ? 'animate-dragon-float delay-500' : ''}`} />
           </div>
           
           <div className="flex items-center justify-center gap-3 mb-5">
