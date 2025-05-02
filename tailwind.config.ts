@@ -103,6 +103,11 @@ export default {
 					"50%": { opacity: "0.2", transform: "scale(1.5)" },
 					"100%": { opacity: "0", transform: "scale(2)" }
 				},
+				"logo-icon": {
+					"0%": { opacity: "0.4", transform: "scale(0.9)" },
+					"50%": { opacity: "1", transform: "scale(1.1)" },
+					"100%": { opacity: "0.4", transform: "scale(0.9)" }
+				},
 				"sword-rotate": {
 					"0%": { transform: "rotate(-45deg)" },
 					"25%": { transform: "rotate(-30deg)" },
@@ -148,6 +153,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pixel-pulse': 'pixel-pulse 2s infinite',
 				"logo-pulse": "logo-pulse 3s ease-in-out forwards",
+				"logo-icon": "logo-icon 2s ease-in-out infinite",
 				"sword-rotate": "sword-rotate 2s ease-in-out",
 				"wand-rotate": "wand-rotate 2s ease-in-out",
 				"char-bounce": "char-bounce 0.6s ease-in-out",
